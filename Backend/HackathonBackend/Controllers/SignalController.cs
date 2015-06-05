@@ -14,7 +14,7 @@
         [Route("api/Signal/Create")]
 
         //TODO : FIX
-        public IHttpActionResult CreateSignal([FromBody]object model)
+        public IHttpActionResult CreateSignal([FromBody]CreateSignalBindingModel model)
         {
             if (!ModelState.IsValid)
             {
