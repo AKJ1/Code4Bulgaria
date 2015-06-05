@@ -9,7 +9,20 @@ namespace HackathonBackend.Models
 
     public class User : IdentityUser
     {
+        public string FirstName { get; set; }
+
+        public string MiddleName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string City { get; set; }
+
+        public string PostCode { get; set; }
+
+        public string Adress { get; set; }
+
         public virtual ICollection<Signal> SubmittedSignals { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

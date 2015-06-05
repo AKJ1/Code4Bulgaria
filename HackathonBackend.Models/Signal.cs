@@ -28,8 +28,6 @@
 
         public string Address { get; set; }
 
-        public ICollection<string> RequiredComponents { get; set; }
-
         [Required]
         public virtual Institution AssignedInstitution { get; set; }
 
@@ -44,6 +42,8 @@
         public TimeSpan TimeToSolve { get; set; }
 
         public bool IsResolved { get; set; }
+
+        public bool IsAnonymous { get; set; }
 
     }
 }

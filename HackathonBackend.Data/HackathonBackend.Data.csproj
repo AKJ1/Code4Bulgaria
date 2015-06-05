@@ -52,11 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IHackathonData.cs" />
+    <Compile Include="Contracts\IHackathonDbContext.cs" />
+    <Compile Include="Contracts\IRepository.cs" />
     <Compile Include="HackathonDbContext.cs" />
+    <Compile Include="Migrations\HackathonMigrationsConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="UnitOfWork\HackathonData.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HackathonBackend.Models\HackathonBackend.Models.csproj">
@@ -68,6 +71,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

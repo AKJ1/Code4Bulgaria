@@ -57,9 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeoLocation.cs" />
     <Compile Include="Institution.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Keyword.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signal.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

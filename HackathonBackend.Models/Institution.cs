@@ -11,6 +11,8 @@
         public Institution()
         {
             this.keywords = new List<string>();
+            this.RequiredFields = new List<string>();
+            this.Signals = new List<Signal>();
         }
         private ICollection<string> keywords;
 
@@ -19,8 +21,14 @@
 
         public string InstitutionName       { get; set; }
 
-        public ICollection<string> Keywords { get; set; }
+        public ICollection<Keyphrase> Keywords { get; set; }
+
+        public ICollection<string> RequiredFields{ get; set; } 
 
         public string InstitutionUrl        { get; set; }
+
+        public ICollection<Signal> Signals  { get; set; }
+
+        public bool AllowAnonymous          { get; set; }
     }
 }
