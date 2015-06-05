@@ -59,7 +59,7 @@
   <ItemGroup>
     <Compile Include="GeoLocation.cs" />
     <Compile Include="Institution.cs" />
-    <Compile Include="Keyword.cs" />
+    <Compile Include="Keyphrase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signal.cs" />
     <Compile Include="User.cs" />

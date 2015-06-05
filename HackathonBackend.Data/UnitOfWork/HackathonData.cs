@@ -47,6 +47,11 @@ namespace HackathonBackend.Data.UnitOfWork
             get { return this.GetRepository<Institution>(); }
         }
 
+        public IRepository<Keyphrase> Keyphrases
+        {
+            get { return this.GetRepository<Keyphrase>(); }
+        }
+
         #endregion
 
         #region Methods

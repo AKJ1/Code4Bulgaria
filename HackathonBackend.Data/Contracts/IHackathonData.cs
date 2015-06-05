@@ -15,6 +15,8 @@ namespace HackathonBackend.Data.Contracts
 
         IRepository<Institution> Institutions { get; }
 
+        IRepository<Keyphrase> Keyphrases { get; }
+
         int SaveChanges();
     }
 }

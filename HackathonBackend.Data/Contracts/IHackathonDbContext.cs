@@ -11,6 +11,8 @@
 
         IDbSet<Institution> Institutions { get; set; }
 
+        IDbSet<Keyphrase> Keyphrases { get; set; }
+
         int SaveChanges();
 
         DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;

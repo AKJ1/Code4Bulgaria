@@ -59,11 +59,11 @@ namespace HackathonBackend
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "903626929312-0v5480i71kbj2h1un88so0allu5omb50.apps.googleusercontent.com",
+                ClientSecret = "Nbk_mVLEBkCCK7L5FNXEoXOq"
+            });
         }
     }
 }

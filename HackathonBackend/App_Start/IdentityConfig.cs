@@ -30,7 +30,6 @@ namespace HackathonBackend
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 4,
-                RequireDigit = true,
             };
             var dataProtectionProvider = options.DataProtectionProvider;
             if (dataProtectionProvider != null)

@@ -10,24 +10,23 @@
     {
         public Institution()
         {
-            this.keywords = new List<string>();
+            this.Keywords = new List<Keyphrase>();
             this.RequiredFields = new List<string>();
             this.Signals = new List<Signal>();
         }
-        private ICollection<string> keywords;
 
         [Key]
         public int Id                       { get; set; }
 
         public string InstitutionName       { get; set; }
 
-        public ICollection<Keyphrase> Keywords { get; set; }
+        public virtual ICollection<Keyphrase> Keywords { get; set; }
 
         public ICollection<string> RequiredFields{ get; set; } 
 
         public string InstitutionUrl        { get; set; }
 
-        public ICollection<Signal> Signals  { get; set; }
+        public virtual ICollection<Signal> Signals  { get; set; }
 
         public bool AllowAnonymous          { get; set; }
     }

@@ -42,9 +42,11 @@ namespace HackathonBackend.Data
 
         #region Tables
         public IDbSet<Signal> Signals { get; set; }
-        
+
         public IDbSet<Institution> Institutions { get; set; }
-       
+
+        public IDbSet<Keyphrase> Keyphrases { get; set; }
+
         #endregion
     }
     

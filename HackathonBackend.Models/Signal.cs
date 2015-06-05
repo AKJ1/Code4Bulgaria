@@ -32,18 +32,28 @@
         public virtual Institution AssignedInstitution { get; set; }
 
         [Required]
-        [ForeignKey("Institution")]
-        public int InstitutionId { get; set; }
+        [ForeignKey("AssignedInstitution")]
+        public int AssignedInstitutionId { get; set; }
 
         public Dictionary<string, string> SignalData { get; set; }
 
+        [Column(TypeName = "datetime2")]
         public DateTime SubmittedOn { get; set; }
 
-        public TimeSpan TimeToSolve { get; set; }
+        public long SolveTime { get; set; }
 
         public bool IsResolved { get; set; }
 
         public bool IsAnonymous { get; set; }
 
+        public void SetSolveLength(TimeSpan ts)
+        {
+            this.SolveTime = ts.Ticks;
+        }
+
+        public TimeSpan GetSolveLength()
+        {
+            return TimeSpan.FromTicks(this.SolveTime);
+        }
     }
 }

@@ -9,6 +9,14 @@
     [ComplexType]
     public class GeoLocation
     {
+        public GeoLocation()
+        {
+            this.Longtitude = 0;
+            this.Latitude = 0;
+            this.Accuracy = 0;
+            this.Altitude = 0;
+            this.AltitudeAccuracy = 0;
+        }
         public double Longtitude { get; set; }
 
         public double Latitude { get; set; }
