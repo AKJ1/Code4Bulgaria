@@ -139,24 +139,22 @@ namespace HackathonBackend.Data.Migrations
         private void CreateKeyphrases(HackathonDbContext context)
         {
             var institution = context.Institutions.First();
-            var institutionsByRelevance = new Dictionary<Institution, int>();
-            institutionsByRelevance.Add(institution, 50);
             var list = new List<Keyphrase>()
             {
                 new Keyphrase()
                 {
                     Phrase = "Learning",
-                    InstitutionsByRelevance = institutionsByRelevance
+                    InstitutionId = institution.Id
                 },
                 new Keyphrase()
                 {
                     Phrase = "Not Learning",
-                    InstitutionsByRelevance = institutionsByRelevance
+                   InstitutionId = institution.Id
                 },
                 new Keyphrase()
                 {
                     Phrase = "Learning More",
-                    InstitutionsByRelevance = institutionsByRelevance
+                    InstitutionId = institution.Id
                 },
             };
             foreach (var item in list)
@@ -196,7 +194,7 @@ namespace HackathonBackend.Data.Migrations
                    IsAnonymous           = true,
                    IsResolved            = true,
                    SubmittedOn           = DateTime.Now - TimeSpan.FromDays(7),
-                   SolveTime             = TimeSpan.FromDays(7).Ticks,
+                   ResolveTime             = TimeSpan.FromDays(7).Ticks,
                    UserId                = user.Id,
                    SignalLocation        = new GeoLocation(),
                    
@@ -212,7 +210,7 @@ namespace HackathonBackend.Data.Migrations
                    IsAnonymous           = false,
                    IsResolved            = true,
                    SubmittedOn           = DateTime.Now - TimeSpan.FromDays(7),
-                   SolveTime             = TimeSpan.FromDays(7).Ticks,
+                   ResolveTime           = TimeSpan.FromDays(7).Ticks,
                    UserId                = user.Id,
                    AssignedInstitution   = institution,
                    SignalData = new Dictionary<string, string>()
@@ -234,6 +232,7 @@ namespace HackathonBackend.Data.Migrations
 
                 }
             };
+            Signals.ForEach(s => institution.Signals.Add(s));
             Signals.ForEach(s => context.Signals.Add(s));
             context.SaveChanges();
         }

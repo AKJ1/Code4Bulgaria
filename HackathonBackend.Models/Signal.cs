@@ -6,6 +6,12 @@
     using System.ComponentModel.DataAnnotations.Schema;
     public class Signal
     {
+        public Signal()
+        {
+            SubmittedOn = DateTime.Now;
+            IsResolved = false;
+            ResolveTime = 0;
+        }
         [Key]
         public int Id { get; set; }
 
@@ -40,7 +46,7 @@
         [Column(TypeName = "datetime2")]
         public DateTime SubmittedOn { get; set; }
 
-        public long SolveTime { get; set; }
+        public long ResolveTime { get; set; }
 
         public bool IsResolved { get; set; }
 
@@ -48,12 +54,12 @@
 
         public void SetSolveLength(TimeSpan ts)
         {
-            this.SolveTime = ts.Ticks;
+            this.ResolveTime = ts.Ticks;
         }
 
         public TimeSpan GetSolveLength()
         {
-            return TimeSpan.FromTicks(this.SolveTime);
+            return TimeSpan.FromTicks(this.ResolveTime);
         }
     }
 }

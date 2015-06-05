@@ -7,7 +7,7 @@ using HackathonBackend.Models;
 
 namespace HackathonBackend.Data.Contracts
 {
-    interface IHackathonData
+    public interface IHackathonData
     {
         IRepository<User> Users { get; }
 

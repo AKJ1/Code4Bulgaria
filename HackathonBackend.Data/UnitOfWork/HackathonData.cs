@@ -9,7 +9,7 @@ using HackathonBackend.Models;
 
 namespace HackathonBackend.Data.UnitOfWork
 {
-    class HackathonData : IHackathonData
+    public class HackathonData : IHackathonData
     {
         #region Private Fields
         private HackathonDbContext context;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HackathonBackend.Models
 {
@@ -8,10 +9,16 @@ namespace HackathonBackend.Models
     {
         [Key]
         public int Id { get; set; }
-
+        [Required]
         public string Phrase { get; set; }
 
-        public virtual IDictionary<Institution, int> InstitutionsByRelevance { get; set; }
+        public virtual Institution Institution { get; set; }
+
+        public int KeywordScore { get; set; }
+
+        [Required]
+        [Column("Institution")]
+        public int  InstitutionId { get; set; }
 
     }
 }
