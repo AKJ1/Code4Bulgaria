@@ -29,6 +29,8 @@ namespace HackathonBackend.Models
 
         public string Address { get; set; }
 
+        public ICollection<string> RequiredComponents { get; set; }
+
         [Required]
         public virtual Institution AssignedInstitution { get; set; }
 
@@ -39,6 +41,8 @@ namespace HackathonBackend.Models
         public Dictionary<string, string> SignalData { get; set; }
 
         public DateTime SubmittedOn { get; set; }
+
+        public bool IsResolved { get; set; }
+
     }
 }
-i
