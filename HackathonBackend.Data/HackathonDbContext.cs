@@ -32,6 +32,8 @@ namespace HackathonBackend.Data
             base.OnModelCreating(modelBuilder);
         }
 
+        
+
         public IDbSet<T> Set<T>() where T : class
         {
             return base.Set<T>();
@@ -39,7 +41,10 @@ namespace HackathonBackend.Data
         #endregion
 
         #region Tables
-
+        public IDbSet<Signal> Signals { get; set; }
+        
+        public IDbSet<Institution> Institutions { get; set; }
+       
         #endregion
     }
     

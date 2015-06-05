@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace HackathonBackend.Models
+﻿namespace HackathonBackend.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -41,6 +40,8 @@ namespace HackathonBackend.Models
         public Dictionary<string, string> SignalData { get; set; }
 
         public DateTime SubmittedOn { get; set; }
+
+        public TimeSpan TimeToSolve { get; set; }
 
         public bool IsResolved { get; set; }
 

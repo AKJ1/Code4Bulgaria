@@ -10,6 +10,11 @@ namespace HackathonBackend.Data.Contracts
     interface IHackathonData
     {
         IRepository<User> Users { get; }
+
+        IRepository<Signal> Signals { get; }
+
+        IRepository<Institution> Institutions { get; }
+
         int SaveChanges();
     }
 }

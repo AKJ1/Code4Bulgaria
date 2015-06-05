@@ -5,7 +5,11 @@
     using HackathonBackend.Models;
     public interface IHackathonDbContext
     {
-        IDbSet<User> Users { get; set; } 
+        IDbSet<User> Users { get; set; }
+        
+        IDbSet<Signal> Signals { get; set; }
+
+        IDbSet<Institution> Institutions { get; set; }
 
         int SaveChanges();
 

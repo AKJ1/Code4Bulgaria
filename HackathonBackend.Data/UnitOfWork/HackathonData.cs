@@ -37,6 +37,16 @@ namespace HackathonBackend.Data.UnitOfWork
         {
             get { return this.GetRepository<User>(); }
         }
+        public IRepository<Signal> Signals
+        {
+            get { return this.GetRepository<Signal>(); } 
+        }
+
+        public IRepository<Institution> Institutions
+        {
+            get { return this.GetRepository<Institution>(); }
+        }
+
         #endregion
 
         #region Methods
