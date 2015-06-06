@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 app.controller('HomeController', ['$scope', '$rootScope', 'insitutionsService', function($scope, $rootScope, insitutionsService){
 	$scope.isAuthenticated = function(){
 		return false;
@@ -55,6 +54,38 @@ app.controller('HomeController', ['$scope', '$rootScope', 'insitutionsService', 
 			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias totam vero, sapiente alias autem neque ipsam possimus optio reprehenderit consequuntur modi libero dolore voluptate similique, illum quaerat. Rerum, hic, aut!"
 		},
 	];
+	$scope.categories = [
+		{
+			name: "Бездомни Кучета",
+			description: "description",
+			image: "image",			
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nesciunt doloremque velit laboriosam laborum, earum labore odit reprehenderit temporibus hic totam quam, ad officia voluptates mollitia. At, officia minus expedita?"
+		},
+		{
+			name: "Проблем 2",
+			description: "description",
+			image: "image",			
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias totam vero, sapiente alias autem neque ipsam possimus optio reprehenderit consequuntur modi libero dolore voluptate similique, illum quaerat. Rerum, hic, aut!"
+		},
+		{
+			name: "Проблем 3",
+			description: "description",
+			image: "image",
+			text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eveniet, nihil aut soluta laudantium. Obcaecati illo, at iste facere vel, cupiditate dolorum. Esse quas deserunt labore possimus eligendi eveniet debitis."			
+		},
+		{
+			name: "Проблематика на Проблемите",
+			description: "description",
+			image: "image",			
+			text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt, distinctio totam eum alias earum impedit? Quaerat eos soluta suscipit molestias autem nam dolorum iusto vitae dolore aliquam, deserunt fuga!"
+		},
+		{
+			name: "Улични Проблеми",
+			description: "description",
+			image: "image",		
+			text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt, distinctio totam eum alias earum impedit? Quaerat eos soluta suscipit molestias autem nam dolorum iusto vitae dolore aliquam, deserunt fuga!"	
+		}
+	];
 
 	$scope.toggleLoginForm = function(){
 		$scope.loginEnabled = !$scope.loginEnabled;
@@ -63,5 +94,5 @@ app.controller('HomeController', ['$scope', '$rootScope', 'insitutionsService', 
 		$scope.registerEnabled = !$scope.registerEnabled;
 
 	};
-	$scope.institutions = insitutionsService.getIntitutions();
+	// $scope.institutions = insitutionsService.getIntitutions();
 }]);

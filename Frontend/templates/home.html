@@ -85,14 +85,17 @@
 </div>
 
 <div class="container">
-	<h3> По Сигнал </h3>
-	<div class="category-container col-md-4 col-xs-12 col-sm-6 col-lg-3 col-xl-2" ng-repeat="(catKey, catVal) in categories">
-		<div class="institution-container container">			
-			<div class="cat-photo">{{catVal.image}}</div>
-			<div class="cat-name">{{catVal.name}}</div>
-			<div class="cat-description">{{catVal.description}}</div>
+		<h3> По Проблем </h3>
+	<div class=" col-md-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-xl-offset-0 col-sm-6 col-lg-3 col-xl-2" ng-repeat="(catKey, catVal) in categories">
+		<div class="category-container">			
+			<div class="category-profile">
+				<div class="cat-photo">{{catVal.image}}</div>
+				<div class="cat-name">{{catVal.name}}</div>
+				<div class="cat-description">{{catVal.description}}</div>
+				<div class="cat-text">{{catVal.text}}</div>
+			</div>		
 			<div class="cat-complaint-button">
-				<button class="complaint-button btn-ghost-0" class="submitComplaint({{inst.id}})">Подай Сигнал</button>
+				<button class="complaint-button btn btn-ghost-0" class="submitComplaint({{inst.id}})">Подай Сигнал</button>
 			</div>
 		</div>
 	</div>
@@ -100,7 +103,7 @@
 	
 </section>
 <footer>
-	<div>
+<!-- 	<div>
 		<div class="hackathon-logo"></div>
 		<div class="hackathon-links"></div>
 		<div class="hackathon-credits"></div>
@@ -108,5 +111,68 @@
 	<div>
 		<div class="hackathon-logo"></div>
 	</div>
-	<div class="signature"></div>
+	<div class="signature"></div> -->
+
+	<div class="col-md-12 col-xl-12 col-xs-12 col-sm-12 col-lg-12 hero-element-parent no-margin">
+			<div class="hero-skrollable skrollable">
+				
+			</div>
+			<div class="hero-overlay overlay">
+				
+			</div>
+
+			<div class="container hero-element-container">
+				<div class="hero-unit col-md-10 col-sm-10 col-xs-12 col-md-offset-1 col-sm-offset-1 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+					<div class="site-introduction">
+						<h1>По-лесен начин за подаване на сигнали.</h1>
+					</div>
+					<div class="registerbox" ng-if="!isAuthenticated()">
+						<div>
+							<div class="col-md-12">
+								<div class="col-xs-12 col-sm-5 col-md-6 col-lg-4 col-xl-4 col-lg-offset-1 col-xl-offset-1 ">
+									<a ng-click="toggleRegisterForm()" class="btn btn-block btn-lg btn-ghost margin-v-20">Регистрирай се</a>
+								</div>
+								<div class="col-xs-12 col-sm-5 col-md-6 col-lg-4 col-xl-4 col-lg-offset-2 col-xl-offset-2 ">
+									<a ng-click="toggleLoginForm()" class="btn btn-block btn-lg btn-ghost margin-v-20">
+										Вход
+									</a>
+								</div>
+							
+							</div>
+							<br> <!-- 
+							<div id="googleLogin"  class="form-group col-md-6 col-xl-4 col-lg-offset-1 col-xl-offset-1 col-lg-4">
+								<a class="btn btn-block btn-social btn-facebook btn-lg" title="">
+									<i class="fa fa-facebook"></i> Влез със Facebook
+								</a>
+							</div>
+							<div id="facebookLogin" class="col-md-6 col-lg-4 col-lg-offset-2 col-xl-offset-2 col-xl-4">
+								<a class="btn btn-block btn-social btn-google-plus btn-lg" title="">
+									<i class="fa fa-google"></i> Влез със Google
+								</a>
+							</div> -->
+						</div>
+					</div>
+					<div class="searchbox" ng-if="isAuthenticated()">
+						<div class="col-md-12">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-lg-offset-1 col-xl-offset-1 ">
+								<a href="/#/signals/new" class="btn btn-block btn-lg btn-ghost margin-v-20">Подай Сигнал</a>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-lg-offset-2 col-xl-offset-2 ">
+								<a href="/#/signals/my" class="btn btn-block btn-lg btn-ghost margin-v-20">
+									Твойте Сигнали
+								</a>
+							</div>
+						</div>
+						
+					</div>
+
+					<div id="hiddenLoginPopup" class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-xs-12" ng-show="loginEnabled">
+						<login-form></login-form>
+					</div>
+					<div id="hiddenRegisterPopup" class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-xs-12" ng-show="registerEnabled">
+						<register-form></register-form>
+					</div>					
+				</div>
+			</div>
+		</div>
 </footer>

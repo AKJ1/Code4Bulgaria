@@ -16,6 +16,7 @@ body{
 .hero-overlay {
 	opacity: .5;
 	width: 100vw; 
+	max-width: 100%;
 	height: 40vh;
 	position: absolute;
 	background-color: #4b0082;
@@ -107,6 +108,7 @@ body{
 #hiddenLoginPopup, #hiddenRegisterPopup{
 	position: fixed;	
 	left:0;
+	z-index: 100000;
 }
 
 .register-form-container, .login-form-container{
@@ -116,7 +118,7 @@ body{
 
 }
 
-.institution-container{
+.institution-container, .category-container{
 	/*border-radius: 10px;*/
 	background-color: white;
 	box-shadow: 0px 0px 10px #aaa;
@@ -125,28 +127,36 @@ body{
 	min-height: 50vh;
 	height: 70vh;
 }
-.inst-photo{
+.inst-photo, .cat-photo{
 	max-width: 100%;
 }
-.inst-name{
+.inst-name {
 	color: #D10047;
 	text-transform: capitalize;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-size: 24pt;
 }
-.inst-description{
+.cat-name{
+	color: limegreen;
+	text-transform: capitalize;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 24pt;
+}
+.inst-description, .cat-description{
 	text-transform: capitalize;
 	margin-bottom: 10px;
 	font-size: 14pt;
 }
-.inst-text{
+
+.inst-text, .cat-text{
 	line-height: 1.41;
 	margin-bottom: 10px;
 	overflow: elipsis;
 	text-overflow: elipsis;
 }
-.inst-complaint-button{
+.inst-complaint-button, .cat-complaint-button{
 	/*position: relative;*/
 	bottom : 0;
 	margin-top: 
@@ -156,6 +166,6 @@ body{
 	bottom: 0;
 	width:100%;
 }
-.institution-profile{
+.institution-profile, .category-profile{
 	height: 90%;
 }
