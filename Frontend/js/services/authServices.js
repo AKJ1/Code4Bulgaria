@@ -28,7 +28,7 @@ app.factory('authService',
                 delete sessionStorage['currentUser'];
 				var request = {
 			   method:'GET',
-			   usrl: baseServiceUrl + '/api/Account/Logout';
+			   url: baseServiceUrl + '/api/Account/Logout'
 			   };
 			   $http(request).success(function(data) {
                     success(data);
@@ -38,7 +38,7 @@ app.factory('authService',
             getCurrentUser : function() {
                var request = {
 			   method:'GET',
-			   usrl: baseServiceUrl + '/api/Account/UserInfo';
+			   url: baseServiceUrl + '/api/Account/UserInfo'
 			   };
 			   $http(request);
             },

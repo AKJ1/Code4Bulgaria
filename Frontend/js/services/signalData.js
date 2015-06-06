@@ -11,8 +11,7 @@ app.factory('signalService',
                  $http(request).success(function(data) {
                  success(data);
                 }).error(error);
-			}
-		}
+			},
 		
 		resolveSignal:  function(){
 			var request = {
@@ -22,8 +21,7 @@ app.factory('signalService',
                  $http(request).success(function(data) {
                  success(data);
                 }).error(error);
-			}
-		}
+			},
 		
 		mySignals:  function(data){
 			var request = {
@@ -33,8 +31,7 @@ app.factory('signalService',
                  $http(request).success(function(data) {
                  success(data);
                 }).error(error);
-			}
-		}
+			},
 		
 		getSignal:  function(id){
 			var request = {

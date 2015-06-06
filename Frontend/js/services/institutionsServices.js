@@ -10,7 +10,7 @@ app.factory('insitutionsService',
                  $http(request).success(function(data) {
                  success(data);
                 }).error(error);
-			}
+			},
 			
 			getInstitutionById:  function(id){
 			var request = {
@@ -20,7 +20,7 @@ app.factory('insitutionsService',
                  $http(request).success(function(data) {
                  success(data);
                 }).error(error);
-			}
+			},
 			
 			getInstitutionByKeyword:  function(keyword){
 			var request = {
@@ -32,5 +32,4 @@ app.factory('insitutionsService',
                 }).error(error);
 			}
 		}
-	}
 });

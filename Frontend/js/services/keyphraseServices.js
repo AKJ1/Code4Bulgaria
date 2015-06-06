@@ -10,7 +10,7 @@ app.factory('keyphraseService',
                  $http(request).success(function(data) {
                  success(data);
                 }).error(error);
-			}
+			},
 			
 			getKeyphraseById:  function(id){
 			var request = {
@@ -23,5 +23,4 @@ app.factory('keyphraseService',
 			}
 			
 		}
-	}
 });
