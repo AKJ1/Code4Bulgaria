@@ -1,6 +1,6 @@
 app.factory('userData', function ($http) {
 	$http.defaults.headers.common['Authorization'] = "Bearer " + userSession.getCurrentUser().access_token;
-	var url = 'http://softuni-ads.azurewebsites.net/api/user';
+	var url = 'http://localhost:5475/';
 	function getUserAds(adParams) {
 		return $http.get(url + '/ads', {params: adParams});
 	}

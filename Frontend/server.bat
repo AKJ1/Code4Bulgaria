@@ -1,2 +1,2 @@
 cd app
-node ..\scripts\web-server.js
+node C:\Users\UniUser\Desktop\hakaton\Code4Bulgaria\Frontend\scripts\web-server.js
