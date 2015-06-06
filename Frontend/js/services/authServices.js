@@ -16,6 +16,9 @@ app.factory('authService',
                 delete sessionStorage['currentUser'];
 				var request = {
 			   method:'GET',
+               headers: {
+                'Access-Control-Allow-Origin' : 'localhost:5475'
+               },
 			   url: baseServiceUrl + '/api/Account/Logout'
 			   };
 			   $http(request).success(function(data) {

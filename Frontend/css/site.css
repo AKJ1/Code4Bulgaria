@@ -38,7 +38,40 @@ body{
 	background-color: rgba(0,0,0,0.1);
 	color: #F2F2F2;
 	border: 2px solid white;
+	border-radius: 100px;
 
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out;
+
+}
+
+.btn-ghost-0{
+
+	background-color: rgba(0,0,0,0.0);
+	color: indigo;
+	border: 2px solid indigo;
+	border-radius: 5px;
+
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out;
+
+}
+
+.btn-ghost-0:hover{
+
+	background-color: rgba(0,0,0,0.0);
+	color: #D10047;
+	border: 2px solid #D10047;
 
 	/* CSS Transition */
 	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
@@ -71,14 +104,58 @@ body{
 	margin-bottom: 50px;
 }
 
-#hiddenLoginPopup{
-	position: fixed;
-	
+#hiddenLoginPopup, #hiddenRegisterPopup{
+	position: fixed;	
 	left:0;
-	
 }
-.login-form-container{
+
+.register-form-container, .login-form-container{
 	background: white;
 	border-radius: 10px;
 	padding: 20px;
+
+}
+
+.institution-container{
+	/*border-radius: 10px;*/
+	background-color: white;
+	box-shadow: 0px 0px 10px #aaa;
+	margin-bottom: 50px;
+	padding: 2vw;
+	min-height: 50vh;
+	height: 70vh;
+}
+.inst-photo{
+	max-width: 100%;
+}
+.inst-name{
+	color: #D10047;
+	text-transform: capitalize;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 24pt;
+}
+.inst-description{
+	text-transform: capitalize;
+	margin-bottom: 10px;
+	font-size: 14pt;
+}
+.inst-text{
+	line-height: 1.41;
+	margin-bottom: 10px;
+	overflow: elipsis;
+	text-overflow: elipsis;
+}
+.inst-complaint-button{
+	/*position: relative;*/
+	bottom : 0;
+	margin-top: 
+	width: 100%;
+}
+.complaint-button{	
+	bottom: 0;
+	width:100%;
+}
+.institution-profile{
+	height: 90%;
 }

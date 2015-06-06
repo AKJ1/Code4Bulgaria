@@ -4,13 +4,62 @@ app.controller('HomeController', ['$scope', '$rootScope', function($scope, $root
 	};
 
 	$scope.loginEnabled = false;
+	$scope.registerEnabled = false;
 
 	$scope.alert = function(string){
 		alert(string);
 	};
 
+	$scope.institutions = [
+		{
+			name: "name",
+			description: "description",
+			image: "image",			
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nesciunt doloremque velit laboriosam laborum, earum labore odit reprehenderit temporibus hic totam quam, ad officia voluptates mollitia. At, officia minus expedita?"
+		},
+		{
+			name: "name",
+			description: "description",
+			image: "image",			
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias totam vero, sapiente alias autem neque ipsam possimus optio reprehenderit consequuntur modi libero dolore voluptate similique, illum quaerat. Rerum, hic, aut!"
+		},
+		{
+			name: "name",
+			description: "description",
+			image: "image",
+			text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eveniet, nihil aut soluta laudantium. Obcaecati illo, at iste facere vel, cupiditate dolorum. Esse quas deserunt labore possimus eligendi eveniet debitis."			
+		},
+		{
+			name: "name",
+			description: "description",
+			image: "image",			
+			text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt, distinctio totam eum alias earum impedit? Quaerat eos soluta suscipit molestias autem nam dolorum iusto vitae dolore aliquam, deserunt fuga!"
+		},
+		{
+			name: "name",
+			description: "description",
+			image: "image",		
+			text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt, distinctio totam eum alias earum impedit? Quaerat eos soluta suscipit molestias autem nam dolorum iusto vitae dolore aliquam, deserunt fuga!"	
+		},
+		{
+			name: "name",
+			description: "description",
+			image: "image",			
+			text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eveniet, nihil aut soluta laudantium. Obcaecati illo, at iste facere vel, cupiditate dolorum. Esse quas deserunt labore possimus eligendi eveniet debitis."			
+		},
+		{
+			name: "name",
+			description: "description",
+			image: "image",			
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias totam vero, sapiente alias autem neque ipsam possimus optio reprehenderit consequuntur modi libero dolore voluptate similique, illum quaerat. Rerum, hic, aut!"
+		},
+	];
+
 	$scope.toggleLoginForm = function(){
 		$scope.loginEnabled = !$scope.loginEnabled;
-		alert($scope.loginEnabled);
+	};
+	$scope.toggleRegisterForm = function(){
+		$scope.registerEnabled = !$scope.registerEnabled;
+
 	};
 }]);
