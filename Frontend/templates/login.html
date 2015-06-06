@@ -1,0 +1,54 @@
+<div class=" login-form-container col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xl-8 col-xl-offset-2">
+	
+<div id="loginContainer" class="col-md-6">
+	<form class="form-horizontal">
+	<legend>Login</legend>
+	  <fieldset>
+	    <div class="form-group">
+	      <label for="inputEmail" class=" control-label">Username</label>
+	      <div class="">
+	        <input type="text" class="form-control" id="inputEmail" placeholder="Username" ng-model="user.name">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPassword" class="control-label">Password</label>
+	      <div class="">
+	        <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="user.password">
+	        <div class="checkbox">
+	          <label>
+	            <input type="checkbox"> Remember me.
+	          </label>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <div class="col-lg-6 col-lg-offset-2">				
+	        <button type="submit" class="btn btn-primary" ng-click="login()">Submit</button>
+	        <button type="submit" class="btn btn-default" value="#/">Cancel</button>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+<div id="externalLogin" class="col-md-6">
+
+	<legend>External Login</legend>
+	<div class="form-group">
+		<label>Facebook</label>
+		<div id="googleLogin" >
+			<a class="btn btn-block btn-social btn-facebook btn-md" title="">
+				<i class="fa fa-facebook"></i> Sign in with facebook
+			</a>
+		</div>
+		<br>
+		<label>Google</label>
+		<div id="facebookLogin" class="">
+			<a class="btn btn-block btn-social btn-google-plus btn-md" title="">
+				<i class="fa fa-google"></i> Sign in with google
+			</a>
+		</div>
+	</div>
+</div>
+
+
+</div>

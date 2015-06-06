@@ -62,6 +62,6 @@ app.factory('authService',
                     success(data);
                 }).error(error);
 			}
-        }
+        };
     }
 );

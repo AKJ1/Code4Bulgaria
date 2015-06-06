@@ -1,1 +1,7 @@
 /*Css goes here*/
+
+.login-form-container{
+	border-radius: 5px;
+	/*background-color: magenta;*/
+	min-height: 75vh;
+}
