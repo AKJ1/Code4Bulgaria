@@ -10,7 +10,7 @@
     {
         private HackathonData data = new HackathonData();
         [HttpPost]
-        [Authorize]
+       
         [Route("api/Signal/Create")]
 
         //TODO : FIX
@@ -21,14 +21,14 @@
                 return BadRequest(ModelState);
             }
             Signal submittedSignal = new Signal();
-            //submittedSignal.City = model.City;
-            //submittedSignal.Address = model.Address;
-            ////submittedSignal.SignalLocation = model.SignalLocation;
-            //submittedSignal.UserId = User.Identity.GetUserId();
-            //submittedSignal.AssignedInstitutionId = model.InstitutionId;
-            ////submittedSignal.Images = model.Images;
-            ////submittedSignal.SignalData = model.SignalData;
-            //submittedSignal.Text = model.Text;
+            submittedSignal.City = model.City;
+            submittedSignal.Address = model.Address;
+            submittedSignal.SignalLocation = model.SignalLocation;
+            submittedSignal.UserId = User.Identity.GetUserId();
+            submittedSignal.AssignedInstitutionId = model.InstitutionId;
+            submittedSignal.Images = model.Images;
+            submittedSignal.SignalData = model.SignalData;
+            submittedSignal.Text = model.Text;
 
             data.Signals.Add(submittedSignal);
             return Ok(new {message = "Sucessful Submission!"});
