@@ -1,16 +1,20 @@
-app.controller('userController', ['$scope', 'authService', function($scope, authService){
-	$scope.login = function(username, password){
+app.controller('userController', ['$scope', 'authService', function($scope, authService, $location){
+	$scope.login = function(){
 		var loginData = {
-			username: username,
-			password: password
+			username: $scope.user.name,
+			password: $scope.user.password,
+			grant_type: 'password'
 		}
 		var success = function(result){
 			sessionStorage["Authorization"] = "Bearer " + result.token;
+			
+			alert('Ok');
 		}
 		var error = function(result){
+		
 			alert(result);
 		}
-		authService.login(logindata, sucess)
+		authService.login(loginData, success, error)
 	}
 
 	$scope.register = function(email, password, repeatPassowrd){
