@@ -1,27 +1,15 @@
 app.factory('authService',
     function ($http) {
 	var baseServiceUrl = 'http://localhost:5475/';
+	
         return {
-            login: function(userData, success, error) {
-                var request = {
-                    method: 'POST',
-                    url: baseServiceUrl + 'token',
-                    data: userData
-                };
-                 $http(request).success(function(data) {
-                 success(data);
-                }).error(data);
+            login: function(userData) {
+
+                 return $http.post(baseServiceUrl + 'token', userData);
             },
 
-            register: function(userData, success, error) {
-                var request = {
-                    method: 'POST',
-                    url: baseServiceUrl + '/api/user/register',
-                    data: userData
-                };
-                $http(request).success(function(data) {
-                    success(data);
-                }).error(error);
+            register: function(userData) {
+                return $http.post('http://localhost:5475/api/Account/Register', userData)
             },
 
             logout: function() {
