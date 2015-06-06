@@ -1,6 +1,6 @@
 app.factory('authService',
     function ($http) {
-	var baseServiceUrl = '';
+	var baseServiceUrl = 'http://localhost:5475/';
         return {
             login: function(userData) {
                 var request = {

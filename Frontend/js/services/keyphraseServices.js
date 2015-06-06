@@ -1,6 +1,6 @@
 app.factory('keyphraseService',
     function ($http) {
-	var baseServiceUrl = '';
+	var baseServiceUrl = 'http://localhost:5475/';
         return {
 		getKeyphrases:  function(){
 			var request = {

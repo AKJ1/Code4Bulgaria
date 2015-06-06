@@ -1,6 +1,6 @@
 app.factory('signalService',
     function ($http) {
-	var baseServiceUrl = '';
+	var baseServiceUrl = 'http://localhost:5475/';
         return {
 		createSignal:  function(data){
 			var request = {

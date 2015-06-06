@@ -1,6 +1,6 @@
 app.factory('insitutionsService',
     function ($http) {
-	var baseServiceUrl = '';
+	var baseServiceUrl = 'http://localhost:5475/';
         return {
 		getIntitutions:  function(){
 			var request = {
