@@ -11,10 +11,10 @@ namespace HackathonBackend.Models
         [Required]
         public string Text { get; set; }
 
-        //public Dictionary<string, byte[]> Images { get; set; }
+        public Dictionary<string, byte[]> Images { get; set; }
 
         //These are all optional properties that can be included but arent nessecarily needed
-        //public GeoLocation SignalLocation { get; set; }
+        public GeoLocation SignalLocation { get; set; }
 
         public string City { get; set; }
 
@@ -22,7 +22,7 @@ namespace HackathonBackend.Models
 
         public int InstitutionId { get; set; }
 
-        //public Dictionary<string, string> SignalData { get; set; }
+        public Dictionary<string, string> SignalData { get; set; }
 
     }
 }
