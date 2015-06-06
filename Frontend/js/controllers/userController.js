@@ -28,9 +28,9 @@ app.controller('userController', ['$scope', 'authService', function($scope, auth
 	$scope.register = function(){
 
 		var userData = {
-			username : $scope.user.name,
+			email : $scope.user.name,
 			password : $scope.user.password,
-			repeatPassowrd : $scope.user.repeatPassowrd
+			confirmPassword : $scope.user.password
 		}
 		var success = function(result){
 			sessionStorage["Authorization"] = "Bearer " + result.token;
@@ -39,6 +39,7 @@ app.controller('userController', ['$scope', 'authService', function($scope, auth
 		var error = function(result){
 			alert(result);
 		}
+		
 		authService.register(userData).success(function(data) {
                     success(data);
                 }).error(data);

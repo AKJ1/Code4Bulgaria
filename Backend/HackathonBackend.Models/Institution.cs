@@ -20,6 +20,10 @@
 
         public string InstitutionName       { get; set; }
 
+        public string Description { get; set; }
+
+        public string Text { get; set; }
+
         public virtual ICollection<Keyphrase> Keywords { get; set; }
 
         public ICollection<string> RequiredFields{ get; set; } 
