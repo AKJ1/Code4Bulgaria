@@ -1,7 +1,84 @@
 /*Css goes here*/
 
+@font-face{
+	font-family: OpenSans;
+	src: url("../fonts/OpenSans-Regular.ttf");
+}
+body{
+	font-family: OpenSans, helvetica, verdana, tahoma ,sans-serif;
+}
 .login-form-container{
 	border-radius: 5px;
 	/*background-color: magenta;*/
 	min-height: 75vh;
+}
+
+.hero-overlay {
+	opacity: .5;
+	width: 100vw; 
+	height: 40vh;
+	position: absolute;
+	background-color: #4b0082;
+
+}
+.hero-element-parent{
+	height: 40vh;
+}
+.hero-element-container{
+	height: 40vh;
+}
+
+.no-margin{
+	margin:0;
+	padding: 0
+}
+
+.btn-ghost{
+
+	background-color: rgba(0,0,0,0.1);
+	color: #F2F2F2;
+	border: 2px solid white;
+
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out color .2s ease-in-out;
+
+}
+
+.btn-ghost:hover{
+
+	background-color: rgba(255,255,255,0.1);
+	border: 2px solid black;
+	color: #2f2f2f
+
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out;
+}
+
+.margin-v-20{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.margin-v-50{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#hiddenLoginPopup{
+	position: fixed;
+	
+	left:0;
+	
+}
+.login-form-container{
+	background: white;
+	border-radius: 10px;
+	padding: 20px;
 }

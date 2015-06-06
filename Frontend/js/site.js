@@ -14,11 +14,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 		controller: 'userController'
 	});
 	$routeProvider.when('/signal/create', {			
-		templateUrl: '/templates/register.html',
+		templateUrl: '/templates/signal.html',
 		controller: 'formController'
 	});
 	$routeProvider.when('/login', {			
 		templateUrl: 'templates/login.html',
-		controller: 'userController'
+		controller: 'HomeController'
 	});
 }]);
