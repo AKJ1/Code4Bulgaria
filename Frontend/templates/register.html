@@ -1,0 +1,41 @@
+<div id="register-form" class="dialog-box">
+	<h1>Register</h1>
+<form>
+	<p>
+		<label for="username">Username:</label>
+		<input ng-model="myForm.username" type="text" id="username" required="required" />
+	</p>
+	<p>
+		<label for="password">Password:</label>
+		<input ng-model="myForm.password" required type="password" required="required" id="password" />
+	</p>
+	<p>
+		<label for="password">Confirm password:</label>
+		<input ng-model="myForm.passwordConf" required type="password" id="password" required="required" />
+	</p>
+	<p>
+		<label for="fullName">Full Name:</label>
+		<input ng-model="myForm.name" type="text" id="fullName" required="required" />
+	</p>
+	<p>
+		<label for="fullName">Email:</label>
+		<input ng-model="myForm.email" type="text" id="fullName" required="required" />
+	</p>
+	<p>
+		<label for="fullName">Phone:</label>
+		<input ng-model="myForm.phone" type="text" id="fullName" required="required" />
+	</p>
+	<p>
+		<select ng-model="myForm.townId">
+			<option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+		</select>
+
+	</p>
+	<p class="buttons">
+		<input type="submit" ng-click="myForm.submitTheForm()" class="button" value="Register" />
+		<a href="/#/login" class="link">Login</a>
+	</p>
+</form>
+
+</div>
+
