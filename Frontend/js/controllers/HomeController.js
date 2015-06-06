@@ -1,4 +1,5 @@
-app.controller('HomeController', ['$scope', '$rootScope', function($scope, $rootScope){
+<<<<<<< HEAD
+app.controller('HomeController', ['$scope', '$rootScope', 'insitutionsService', function($scope, $rootScope, insitutionsService){
 	$scope.isAuthenticated = function(){
 		return false;
 	};
@@ -62,4 +63,5 @@ app.controller('HomeController', ['$scope', '$rootScope', function($scope, $root
 		$scope.registerEnabled = !$scope.registerEnabled;
 
 	};
+	$scope.institutions = insitutionsService.getIntitutions();
 }]);

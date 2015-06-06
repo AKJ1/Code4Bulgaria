@@ -4,26 +4,26 @@ app.factory('authService',
 	
         return {
             login: function(userData) {
-
-                 return $http.post(baseServiceUrl + 'token', userData);
+				return $.post('http://localhost:5475/api/token',userData,
+				function(data, status){
+					alert("Data: " + data + "\nStatus: " + status);
+				});
             },
 
             register: function(userData) {
-                return $http.post('http://localhost:5475/api/Account/Register', userData)
+				return $.post('http://localhost:5475/api/Account/Register',userData,
+				function(data, status){
+					alert("Data: " + data + "\nStatus: " + status);
+				});
+                //return $http.post('http://localhost:5475/api/Account/Register', userData)
             },
 
             logout: function() {
-                delete sessionStorage['currentUser'];
-				var request = {
-			   method:'GET',
-               headers: {
-                'Access-Control-Allow-Origin' : 'localhost:5475'
-               },
-			   url: baseServiceUrl + '/api/Account/Logout'
-			   };
-			   $http(request).success(function(data) {
-                    success(data);
-                }).error(error);
+
+				return $.post('http://localhost:5475/api/Account/Logout',userData,
+				function(data, status){
+					alert("Data: " + data + "\nStatus: " + status); 
+				});
             },
 
             getCurrentUser : function() {

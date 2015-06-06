@@ -3,13 +3,10 @@ app.factory('insitutionsService',
 	var baseServiceUrl = 'http://localhost:5475/';
         return {
 		getIntitutions:  function(){
-			var request = {
-                    method: 'GET',
-                    url: baseServiceUrl + '/api/Institution',
-                };
-                 $http(request).success(function(data) {
-                 success(data);
-                }).error(error);
+			return $.get('http://localhost:5475/api/Institution',
+				function(data, status){
+					console.log(data);
+				});
 			},
 			
 			getInstitutionById:  function(id){
