@@ -1,6 +1,6 @@
 app.controller('HomeController', ['$scope', '$rootScope', 'insitutionsService', function($scope, $rootScope, insitutionsService){
 	$scope.isAuthenticated = function(){
-		return false;
+		return true;
 	};
 
 	$scope.loginEnabled = false;

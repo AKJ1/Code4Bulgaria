@@ -69,7 +69,7 @@
 
 <div class="container" id="anchor">
 	<h3> По Институция </h3>
-	<div class=" col-md-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-xl-offset-0 col-sm-6 col-lg-3 col-xl-2" ng-repeat="(instKey, instVal) in institutions">
+	<div class=" col-md-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-xl-offset-0 col-sm-6 col-lg-3 col-xl-2 isntitution-wrapper" ng-repeat="(instKey, instVal) in institutions">
 		<div class="institution-container clearfix">			
 			<div class="institution-profile">
 				<div class="inst-photo">{{instVal.image}}</div>
@@ -87,8 +87,8 @@
 
 <div class="container">
 		<h3> По Проблем </h3>
-	<div class=" col-md-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-xl-offset-0 col-sm-6 col-lg-3 col-xl-2" ng-repeat="(catKey, catVal) in categories">
-		<div class="category-container">			
+	<div class=" col-md-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-xl-offset-0 col-sm-6 col-lg-3 col-xl-2 category-wrapper" ng-repeat="(catKey, catVal) in categories">
+		<div class="category-container clearfix">			
 			<div class="category-profile">
 				<div class="cat-photo">{{catVal.image}}</div>
 				<div class="cat-name">{{catVal.name}}</div>

@@ -1,36 +1,105 @@
-<div>
+<div class="col-md-8 col-sm-10 col-xs-12 col-sm-offset-1 col-md-offset-2">
 	<div class="infobox"></div>
-	<div class="form-parent">
-		<fieldset>
-			<input type="text" ng-model="signal.summary">
-			<textarea name="" id="" ng-model="signal.text"></textarea>
-			
-			<div class="">
+	<div class="form-parent col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
+		<fieldset>		
+		<legend>Подаване на Сигнал</legend>
+			<div class="signal-main-summary">
+			<label for="signalText">Кратко Описание на Сигнал</label>
 	        	<input type="text" class="form-control" id="inputSummary" ng-model="signalSummary">
 	    	</div>
-	      	<div class="">
-	      	<label for="signalText"></label>
-	        	<textarea name="signalText" id="signalText" ng-model="signal.text"></textarea>
+	      	<div class="signal-main-text">
+	      	<label for="signalText">Подробности за Сигнала</label>
+	        	<textarea rows="10" name="signalText" class="form-control" id="signalText" ng-model="signal.text"></textarea>
 	    	</div>
-	    	<div class="gridmenu">
+	    	<div class="signal-main-actions">	    		
+	    		<a class="btn btn-danger back-button" href="#/">
+  					<i class="fa fa-chevron-left  fa-lg"></i> Назад.
+  				</a>
+  				<a class="btn btn-ghost send-button" ng-click="sendSignal()"> 
+  					<i class="fa fa-paper-plane fa-lg"></i> Изпращане.
+  				</a>
+  				
+  				<a class="btn btn-primary add-button" ng-click="toggleMenu()">
+  					<i class="fa fa-plus fa-lg"></i>
+  				</a>	    		
+	    	</div>
+	    	<div class="gridmenu" ng-show="inputMenuVisible">
 	    		<div class="grid-inner">
-	    			<table>
-	    				<tr>
-	    					<td>Местоположение</td>
-	    					<td>Изобрацение</td>
-	    					<td>Файл</td>
-	    				</tr>
-	    				<tr>
-	    					<td>Адрес</td>
-	    					<td>Телефон</td>
-	    					<td>Описание</td>
-	    				</tr>
-	    				<tr>
-	    					<td>Молба</td>
-	    					<td>Данни</td>
-	    					<td></td>
-	    				</tr>
-	    			</table>
+	    			<div class="">
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="addFormElement('Geolocation')">
+	    						<i class="fa fa-2x fa-map-marker"> </i>
+	    						<div class="col-md-12  icon-parent">			
+	    						<label>Location</label></div>
+	    					</div>
+	    				</div>
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="addFormElement('Images')">
+	    						<i class="fa fa-2x fa-camera"> </i>
+	    						<div class="col-md-12  icon-parent">			
+	    						<label>Image</label>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="addFormElement('Files')">
+	    						<i class="fa fa-2x fa-file-image-o"> </i>
+	    						<div class="col-md-12  icon-parent">			
+	    						<label>File</label></div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="">
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="expression">
+	    						<i class="fa fa-2x fa-home"> </i>
+	    						<div class="col-md-12  icon-parent">			
+	    						<label>Adress</label></div>
+	    					</div>
+	    				</div>
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="expression">
+	    						<i class="fa fa-2x fa-mobile"> </i>
+	    						<div class="col-md-12 icon-parent">			
+	    						<label>Phone</label></div>
+	    					</div>
+	    				</div>
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="expression">
+	    						<i class="fa fa-2x fa-info-circle"> </i>
+	    						<div class="col-md-12  icon-parent">			
+	    						<label>Description</label>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="">
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="expression">
+	    						<i class="fa fa-2x fa-question-circle"> </i>
+	    						<div class="col-md-12  icon-parent">			
+	    						<label>Plead</label>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="expression">
+	    						<i class="fa fa-2x fa-table"> </i>
+	    						<div class="col-md-12  icon-parent">			
+	    						<label>Data</label>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div class="data-button btn btn-flat">
+	    					<div ng-click="expression">
+	    							<i class="fa fa-2x fa-star"> </i>
+	    							<div class="col-md-12  icon-parent">			
+	    								<label>About</label>
+	    							</div>	    						
+		    					</div>
+	    					</div>
+	    				</div>
+	    			</div>
 	    		</div>
 	    	</div>
 		</fieldset>

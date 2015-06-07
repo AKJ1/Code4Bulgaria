@@ -24,6 +24,8 @@ body{
 	opacity: .75;
 	width: 100vw; 
 	max-width: 100%;
+
+	min-height: 400px;
 	height: 40vh;
 	position: absolute;
 	background-color: #101240;
@@ -35,9 +37,12 @@ body{
 }
 .hero-element-parent{
 	height: 40vh;
+	min-height: 400px;
 }
 .hero-element-container{
 	height: 40vh;
+
+	min-height: 400px;
 }
 
 .no-margin{
@@ -180,6 +185,13 @@ body{
 	bottom: 0;
 	width:100%;
 }
+.category-wrapper{
+
+}
+.institution-wrapper .category-wrapper{
+	min-height: 30%;
+	max-height: 40vh;
+}
 .institution-profile, .category-profile{
 	height: 90%;
 }
@@ -192,3 +204,51 @@ body{
 	}
 * html .group             { zoom: 1; } /* IE6 */
 *:first-child+html .group { zoom: 1; } /* IE7 */
+
+.data-button{
+
+	padding: 10px;
+	box-sizing:border-box;
+	margin: 0;
+	width: 100px;
+	height: 33%;
+}
+.data-button .icon-parent{
+	padding: 0 !important;
+
+}
+.icon-parent .i{
+	text-align: center;
+	vertical-align: middle;
+	padding: 0;
+}
+.center-align{
+	vertical-align: middle;
+}
+.gridmenu{
+	padding:0;
+	margin:0;
+	width: auto;
+	box-shadow: 0px 0px 10px #aaa;
+	float:left;
+	display: inline-block;
+}
+
+.signal-main-text textarea{
+	max-width: 100%;
+}
+
+.signal-main-text, .signal-main-actions, .signal-main-summary{
+	margin: 25px;
+}
+
+.add-button{
+	float:right;
+	width: 50px;
+}
+.send-button{
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	color: black;
+}
