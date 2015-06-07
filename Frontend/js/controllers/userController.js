@@ -44,6 +44,27 @@ app.controller('userController', ['$scope', 'authService', function($scope, auth
                     success(data);
                 }).error(data);
 	}
+	
+	$scope.addDetails = function(){
+	var updateData = {
+			FirstName: $scope.user.firstName,
+			MiddleName: $scope.user.middleName,
+			LastName: $scope.user.lastName,
+			Adress: $scope.user.address,
+			PhoneNumber: $scope.user.phone,
+		}
+		var success = function(result){
+			sessionStorage["Authorization"] = "Bearer " + result.token;
+			console.log(result);
+		}
+		var error = function(result){
+			alert(result);
+		}
+		
+		authService.details(updateData).success(function(data) {
+                    success(data);
+                }).error(data);
+	}
 
 	$scope.logout = function(){
 		var sucess = function(){

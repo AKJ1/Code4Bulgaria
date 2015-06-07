@@ -94,5 +94,17 @@ app.controller('HomeController', ['$scope', '$rootScope', 'insitutionsService', 
 		$scope.registerEnabled = !$scope.registerEnabled;
 
 	};
-	// $scope.institutions = insitutionsService.getIntitutions();
+	function getasd(){
+		return $.ajax({
+			url: 'http://localhost:5475/api/Institution',
+			type: 'GET',
+			});
+	};
+	var promise = getasd();
+	promise.success(function (data) {
+	$scope.institutions = data;
+	$scope.$apply();
+console.log($scope.institutions);
+});
+console.log($scope.institutions);
 }]);

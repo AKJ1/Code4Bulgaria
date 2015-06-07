@@ -24,6 +24,8 @@
 
         public string Text { get; set; }
 
+        public string Town { get; set; }
+
         public virtual ICollection<Keyphrase> Keywords { get; set; }
 
         public ICollection<string> RequiredFields{ get; set; } 

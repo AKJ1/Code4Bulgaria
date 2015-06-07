@@ -25,6 +25,7 @@ namespace HackathonBackend.Controllers
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
+        private HackathonBackend.Data.UnitOfWork.HackathonData db = new Data.UnitOfWork.HackathonData();
 
         public AccountController()
         {
@@ -150,6 +151,27 @@ namespace HackathonBackend.Controllers
                 return GetErrorResult(result);
             }
 
+            return Ok();
+        }
+        
+        // POST api/Account/Update
+        [Route("Update")]
+        public async Task<IHttpActionResult> Update([FromBody]UpdatetProfileBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var userId = User.Identity.GetUserId();
+            var user = this.db.Users.GetById(userId);
+            user.FirstName = model.FirstName;
+            user.MiddleName = model.MiddleName;
+            user.LastName = model.LastName;
+            user.Adress = model.Adress;
+            user.PhoneNumber = model.PhoneNumber;
+            this.db.Users.Update(user);
+            this.db.SaveChanges();
             return Ok();
         }
 
