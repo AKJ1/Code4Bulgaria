@@ -267,8 +267,12 @@ body{
 .add-menu-container{
 	position:relative;
 	bottom:300px;
+	background-color: white;
 }
 
+.grid-inner{
+	background-color: white;
+}
 .add-button-container, .send-button-container, .back-button-container{
 	display: inline;
 }

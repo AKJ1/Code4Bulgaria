@@ -1,13 +1,19 @@
 app.controller('formController', ['$scope', '$rootScope', function($scope, $rootScope)
 {
 	$scope.enabledFields = {
-		SignalData: false,
-		Images: false,
-		Address: false,
-		City: false,		
-		Geolocation: false,
-		Content: true,
-		Files: false
+		data: false,
+		images: false,
+		address: false,
+		city: false,		
+		geolocation: false,
+		content: true,
+		files: false,
+		phone: false,
+		description: false,
+		plead: false,
+		middleName: true,
+		name: true,
+
 	};
 	$scope.fieldData = {};
 
@@ -16,28 +22,26 @@ app.controller('formController', ['$scope', '$rootScope', function($scope, $root
 		$scope.updateRequiredFields(institution.fields);
 	});
 	$scope.updateRequiredFields = function(fields){
-		if (enabledField[field.Key] !== null) {
-			enabledField[field.Key] = field.Value;
+		if (enabledFields[field.Key] !== null) {
+			enabledFields[field.Key] = field.Value;
 		}
 	};
 
 	$scope.addFormElement = function(fieldName){
 		$scope.toggleMenu();
-		if (enabledField[fieldName] != null) {
-			enabledField[fieldName] = true;
-		}
+			$scope.enabledFields[fieldName] = true;
 	};
 
 	$scope.removeFormElement = function(fieldName){
-		if (enabledField[fieldName] != null) {
-			enabledField[fieldName] = false;
+		if ($scope.enabledFields[fieldName] == true) {
+			$scope.enabledFields[fieldName] = false;
 		}
 	};
 
 	$scope.serializeFormData = function(){
 		var json = {};
 		for(var field in enabledFields){
-			if (enabledFields[field]) {
+			if ($scope.enabledFields[field]) {
 				json[field] = fieldData[field];
 			}
 		}
