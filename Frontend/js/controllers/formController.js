@@ -1,4 +1,4 @@
-app.controller('formController', ['$scope', '$rootScope', function($scope, $rootScope)
+app.controller('formController', ['$scope', '$rootScope', 'signalService', function($scope, $rootScope, signalService)
 {
 	$scope.enabledFields = {
 		SignalData: false,
@@ -46,4 +46,12 @@ app.controller('formController', ['$scope', '$rootScope', function($scope, $root
 	$scope.toggleMenu = function(){
 		$scope.inputMenuVisible = !$scope.inputMenuVisible;
 	};
+	
+	$scope.sendSignal = function(){
+		var signal = {
+			Description : $scope.signal.text,
+			Text: $scope.signalSummary,
+		}
+		signalService.createSignal(signal);
+	}
 }]);

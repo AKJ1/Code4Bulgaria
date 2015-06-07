@@ -25,6 +25,7 @@
         [Required]
         public string Text { get; set; }
 
+        public string Description { get; set; }
         public Dictionary<string, byte[]> Images { get; set; }
 
         //These are all optional properties that can be included but arent nessecarily needed

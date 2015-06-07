@@ -21,14 +21,10 @@
                 return BadRequest(ModelState);
             }
             Signal submittedSignal = new Signal();
-            submittedSignal.City = model.City;
-            submittedSignal.Address = model.Address;
-            submittedSignal.SignalLocation = model.SignalLocation;
             submittedSignal.UserId = User.Identity.GetUserId();
-            submittedSignal.AssignedInstitutionId = model.InstitutionId;
-            submittedSignal.Images = model.Images;
-            submittedSignal.SignalData = model.SignalData;
+            submittedSignal.User = data.Users.GetById(submittedSignal.UserId);
             submittedSignal.Text = model.Text;
+            submittedSignal.Description = model.Description;
 
             data.Signals.Add(submittedSignal);
             return Ok(new {message = "Sucessful Submission!"});
