@@ -209,6 +209,7 @@
     <Compile Include="Controllers\InstitutionController.cs" />
     <Compile Include="Controllers\KeyphraseController.cs" />
     <Compile Include="Controllers\SignalController.cs" />
+    <Compile Include="Models\UpdatetProfileBindingModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

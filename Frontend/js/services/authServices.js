@@ -4,7 +4,7 @@ app.factory('authService',
 	
         return {
             login: function(userData) {
-				return $.post('http://localhost:5475/api/token',userData,
+				return $.post('http://localhost:5475/token',userData,
 				function(data, status){
 					alert("Data: " + data + "\nStatus: " + status);
 				});
@@ -16,6 +16,23 @@ app.factory('authService',
 					alert("Data: " + data + "\nStatus: " + status);
 				});
                 //return $http.post('http://localhost:5475/api/Account/Register', userData)
+            },
+			
+			details: function(userData) {
+			return $.ajax({
+				method: 'POST',
+				url: 'http://localhost:5475/api/Account/Update',
+				headers: {
+					'Authorization':sessionStorage["Authorization"],
+					'Content-Type':'application/json',
+				},
+				dataType: 'json',
+				data: userData,
+				success: function(data){
+					console.log('succes: '+data);
+				}
+			});
+				
             },
 
             logout: function() {

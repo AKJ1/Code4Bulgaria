@@ -19,7 +19,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 	});
 	$routeProvider.when('/login', {			
 		templateUrl: 'templates/login.html',
-		controller: 'HomeController'
+		controller: 'userController'
 
 	});
 	$routeProvider.when('/user/profile', {			
