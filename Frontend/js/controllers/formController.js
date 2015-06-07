@@ -22,6 +22,7 @@ app.controller('formController', ['$scope', '$rootScope', function($scope, $root
 	};
 
 	$scope.addFormElement = function(fieldName){
+		$scope.toggleMenu();
 		if (enabledField[fieldName] != null) {
 			enabledField[fieldName] = true;
 		}
@@ -43,7 +44,6 @@ app.controller('formController', ['$scope', '$rootScope', function($scope, $root
 		return json;
 	};
 	$scope.toggleMenu = function(){
-		$scope.inputMenu = !$scope.inputMenu;
-		alert($scope.inputMenu);
+		$scope.inputMenuVisible = !$scope.inputMenuVisible;
 	};
 }]);

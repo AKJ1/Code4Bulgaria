@@ -242,13 +242,33 @@ body{
 	margin: 25px;
 }
 
-.add-button{
-	float:right;
-	width: 50px;
-}
+
 .send-button{
 	margin-left: auto;
 	margin-right: auto;
 	width: 40%;
 	color: black;
+	display: inline-block;
+}
+.send-button:hover{
+	color: black;
+}
+
+.send-button{
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	color: black;
+	display: inline-block;
+}
+.add-button{
+	display: inline-block;
+}
+.add-menu-container{
+	position:relative;
+	bottom:300px;
+}
+
+.add-button-container, .send-button-container, .back-button-container{
+	display: inline;
 }

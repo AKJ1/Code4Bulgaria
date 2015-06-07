@@ -1,4 +1,4 @@
-<div class="col-md-8 col-sm-10 col-xs-12 col-sm-offset-1 col-md-offset-2">
+<div>
 	<div class="infobox"></div>
 	<div class="form-parent col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
 		<fieldset>		
@@ -11,153 +11,85 @@
 	      	<label for="signalText">Подробности за Сигнала</label>
 	        	<textarea rows="10" name="signalText" class="form-control" id="signalText" ng-model="signal.text"></textarea>
 	    	</div>
-	    	<div class="signal-main-actions">	    		
-	    		<a class="btn btn-danger back-button" href="#/">
-  					<i class="fa fa-chevron-left  fa-lg"></i> Назад.
-  				</a>
-  				<a class="btn btn-ghost send-button" ng-click="sendSignal()"> 
-  					<i class="fa fa-paper-plane fa-lg"></i> Изпращане.
-  				</a>
-  				
-  				<a class="btn btn-primary add-button" ng-click="toggleMenu()">
-  					<i class="fa fa-plus fa-lg"></i>
-  				</a>	    		
+	    	<div class="signal-main-actions">
+	    		<div class="back-button-container">
+	    			<a class="btn btn-danger back-button" href="#/">
+	  					<i class="fa fa-chevron-left  fa-lg"></i> Назад.
+	  				</a>
+  				</div>	    
+  				<div class="send-button-container">  					
+	  				<a class="btn btn-ghost send-button" ng-click="sendSignal()"> 
+	  					<i class="fa fa-paper-plane fa-lg"></i> Изпращане.
+	  				</a>  				
+  				</div>
+  				<div class="add-button-container">	
+  					<div class="add-menu-container">
+  						<gridmenu></gridmenu>		
+  					</div>
+	  				<a class="btn btn-primary add-button" ng-click="toggleMenu()">
+	  					<i class="fa fa-plus fa-lg"></i> Добави
+	  				</a>	   
+  				</div> 		
 	    	</div>
-	    	<div class="gridmenu" ng-show="inputMenuVisible">
-	    		<div class="grid-inner">
-	    			<div class="">
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="addFormElement('Geolocation')">
-	    						<i class="fa fa-2x fa-map-marker"> </i>
-	    						<div class="col-md-12  icon-parent">			
-	    						<label>Location</label></div>
-	    					</div>
-	    				</div>
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="addFormElement('Images')">
-	    						<i class="fa fa-2x fa-camera"> </i>
-	    						<div class="col-md-12  icon-parent">			
-	    						<label>Image</label>
-	    						</div>
-	    					</div>
-	    				</div>
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="addFormElement('Files')">
-	    						<i class="fa fa-2x fa-file-image-o"> </i>
-	    						<div class="col-md-12  icon-parent">			
-	    						<label>File</label></div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="">
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="expression">
-	    						<i class="fa fa-2x fa-home"> </i>
-	    						<div class="col-md-12  icon-parent">			
-	    						<label>Adress</label></div>
-	    					</div>
-	    				</div>
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="expression">
-	    						<i class="fa fa-2x fa-mobile"> </i>
-	    						<div class="col-md-12 icon-parent">			
-	    						<label>Phone</label></div>
-	    					</div>
-	    				</div>
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="expression">
-	    						<i class="fa fa-2x fa-info-circle"> </i>
-	    						<div class="col-md-12  icon-parent">			
-	    						<label>Description</label>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="">
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="expression">
-	    						<i class="fa fa-2x fa-question-circle"> </i>
-	    						<div class="col-md-12  icon-parent">			
-	    						<label>Plead</label>
-	    						</div>
-	    					</div>
-	    				</div>
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="expression">
-	    						<i class="fa fa-2x fa-table"> </i>
-	    						<div class="col-md-12  icon-parent">			
-	    						<label>Data</label>
-	    						</div>
-	    					</div>
-	    				</div>
-	    				<div class="data-button btn btn-flat">
-	    					<div ng-click="expression">
-	    							<i class="fa fa-2x fa-star"> </i>
-	    							<div class="col-md-12  icon-parent">			
-	    								<label>About</label>
-	    							</div>	    						
-		    					</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    		</div>
+	    	
 	    	</div>
+
+			<div class="extraForms">
+				<div class="form-group" ng-show="requiredForms.name">	
+			      	<div class="">
+			      		<input type="text" placeholder="Име" class="form-control" id="inputFirstName" ng-model="user.firstName">
+			    	</div>
+			      	<div class="" ng-show="requiredForms.middleName">
+			        	<input type="text" class="form-control" placeholder="Бащино Име" id="inputMiddleName" ng-model="user.middleName">
+			    	</div>
+			      	<div class="">
+			        	<input placeholder="Фамилно Име" type="text" class="form-control" id="inputLastName" ng-model="user.lastName">
+			    	</div>
+				</div>
+
+			    <div class="form-group" ng-show="requiredForms.adress">
+			      	<div class="">
+			        	<input type="text" class="form-control" id="inputAdress" ng-model="signal.adress">
+			    	</div>
+			    </div>
+
+			    <div class="form-group" ng-show="requiredForms.userAdress">
+			      	<div class="">
+			        	<input type="text" class="form-control" id="inputUserAdress" ng-model="user.adress">
+			    	</div>
+			    </div>
+				<div class="form-group" ng-show="requiredForms.target">
+			      	<div class="">
+			        	<input type="text" class="form-control" id="inputExtraData" ng-model="signal.target">
+			    	</div>
+			    </div>	
+			    <div class="form-group" ng-show="requiredForms.extraData">
+			      	<div class="">
+			        	<input type="text" class="form-control" id="inputExtraData" ng-model="signal.ExtraData">
+			    	</div>
+			    </div>
+			    <div class="form-group" ng-show="requiredForms.description">
+			      	<div class="">
+			        	<input type="text" class="form-control" id="inputCity" ng-model="user.city">
+			    	</div>
+			    </div>
+			    <div class="form-group" ng-show="requiredForms.request">
+			      	<div class="">
+			        	<input type="text" class="form-control" id="inputCity" ng-model="signal.request">
+			    	</div>
+			    </div>
+			    <div class="form-group" ng-show="requiredForms.Files">
+			      	<div class="">
+			        	<input type="text" class="form-control" id="inputCity" ng-model="signal.request">
+			    	</div>
+			    </div>
+			    <div class="form-group" ng-show="requiredForms.Image">
+			      	<div class="">
+			        	<input type="text" class="form-control" id="inputCity" ng-model="signal.request">
+			    	</div>
+			    </div>
+			</div>
 		</fieldset>
 	</div>
 	
-	<div class="extraForms">
-		<div class="form-group" ng-if="requiredForms.name">	
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputFirstName" ng-model="user.firstName">
-	    	</div>
-	      	<div class="" ng-if="requiredForms.middleName">
-	        	<input type="text" class="form-control" id="inputMiddleName" ng-model="user.middleName">
-	    	</div>
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputLastName" ng-model="user.lastName">
-	    	</div>
-		</div>
-
-	    <div class="form-group" ng-if="requiredForms.adress">
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputAdress" ng-model="signal.adress">
-	    	</div>
-	    </div>
-
-	    <div class="form-group" ng-if="requiredForms.userAdress">
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputUserAdress" ng-model="user.adress">
-	    	</div>
-	    </div>
-		<div class="form-group" ng-if="requiredForms.target">
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputExtraData" ng-model="signal.target">
-	    	</div>
-	    </div>	
-	    <div class="form-group" ng-if="requiredForms.extraData">
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputExtraData" ng-model="signal.ExtraData">
-	    	</div>
-	    </div>
-	    <div class="form-group" ng-if="requiredForms.description">
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputCity" ng-model="user.city">
-	    	</div>
-	    </div>
-	    <div class="form-group" ng-if="requiredForms.request">
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputCity" ng-model="signal.request">
-	    	</div>
-	    </div>
-	    <div class="form-group" ng-if="requiredForms.Files">
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputCity" ng-model="signal.request">
-	    	</div>
-	    </div>
-	    <div class="form-group" ng-if="requiredForms.Image">
-	      	<div class="">
-	        	<input type="text" class="form-control" id="inputCity" ng-model="signal.request">
-	    	</div>
-	    </div>
-	</div>
 </div>
