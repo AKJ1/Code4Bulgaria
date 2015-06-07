@@ -9,19 +9,12 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 		templateUrl: 'templates/home.html',
 		controller: 'HomeController'
 	});
-	$routeProvider.when('/register', {			
-		templateUrl: 'templates/register.html',
-		controller: 'userController'
-	});
+
 	$routeProvider.when('/signal/create', {			
 		templateUrl: '/templates/form.html',
 		controller: 'formController'
 	});
-	$routeProvider.when('/login', {			
-		templateUrl: 'templates/login.html',
-		controller: 'userController'
 
-	});
 	$routeProvider.when('/user/profile', {			
 		templateUrl: 'templates/registerPartTwo.html',
 		controller: 'userController'
